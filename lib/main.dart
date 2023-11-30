@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:paysmart_challenge/locator.dart';
+import 'package:paysmart_challenge/src/home/presenter/components/movie_item.dart';
+import 'package:paysmart_challenge/src/home/presenter/components/movie_page.dart';
 import 'package:paysmart_challenge/src/home/presenter/home_page.dart';
 
 void main() {
@@ -13,12 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const MoviePage(),
     );
   }
 }
