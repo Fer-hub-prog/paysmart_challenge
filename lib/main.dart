@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paysmart_challenge/locator.dart';
-import 'package:paysmart_challenge/src/home/presenter/components/movie_item.dart';
+import 'package:paysmart_challenge/src/home/domain/entities/movies_model_entity.dart';
 import 'package:paysmart_challenge/src/home/presenter/components/movie_page.dart';
 import 'package:paysmart_challenge/src/home/presenter/home_page.dart';
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MoviePage(),
+      home: const HomePage(),
     );
   }
 }

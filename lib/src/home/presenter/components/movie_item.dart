@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:paysmart_challenge/src/home/domain/entities/movies_model_entity.dart';
+import 'package:paysmart_challenge/src/home/presenter/components/movie_page.dart';
 
 class MovieItem extends StatefulWidget {
   final String movieTitle;
   final String posterPath;
   final Function()? onTap;
+  final MoviesModelEntity movie;
 
   const MovieItem(
       {super.key,
       required this.movieTitle,
       required this.posterPath,
-      this.onTap});
+      required this.movie,
+      this.onTap,      
+      required Size imageSize});
+  
 
   @override
   State<MovieItem> createState() => _MovieItemState();
@@ -18,14 +24,20 @@ class MovieItem extends StatefulWidget {
 class _MovieItemState extends State<MovieItem> {
   @override
   Widget build(BuildContext context) => InkWell(
-        onTap: widget.onTap,
+        onTap: () {
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) => MoviePage(movie: widget.movie),
+            ),
+          );
+        },
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
               child: Container(
-                height: 250.0,
+                height: 450.0,
                 width: 90.0,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
