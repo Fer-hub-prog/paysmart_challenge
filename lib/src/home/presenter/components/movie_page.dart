@@ -13,8 +13,12 @@ class MoviePage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Text(
-          "Movie Page",
-          style: TextStyle(color: Colors.orange),
+          "Description",
+          style: TextStyle(
+              color: Colors.orange,
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Inter',
+              fontSize: 24),
         ),
         leading: IconButton(
           icon: const Icon(
@@ -47,7 +51,7 @@ class MoviePage extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                       ),
                     ),
                   ),
@@ -58,7 +62,7 @@ class MoviePage extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 20.0,
+                        fontSize: 30.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -66,10 +70,10 @@ class MoviePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      'Overview: ${movie.overview}',
+                      'Overview:   ${movie.overview}',
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 16.0,
+                        fontSize: 20.0,
                       ),
                     ),
                   ),
@@ -79,9 +83,33 @@ class MoviePage extends StatelessWidget {
           ],
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: const [],
-      // ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.orange,
+        unselectedItemColor: Colors.grey,
+        items: const [
+          BottomNavigationBarItem(
+            backgroundColor: Colors.black,
+            icon: Icon(Icons.favorite),
+            label: 'Favorite',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.category),
+            label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+        ],
+      ),
     );
   }
 }

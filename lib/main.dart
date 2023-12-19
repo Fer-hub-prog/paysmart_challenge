@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:paysmart_challenge/locator.dart';
-import 'package:paysmart_challenge/src/home/domain/entities/movies_model_entity.dart';
-import 'package:paysmart_challenge/src/home/presenter/components/movie_page.dart';
 import 'package:paysmart_challenge/src/home/presenter/home_page.dart';
 
 void main() {

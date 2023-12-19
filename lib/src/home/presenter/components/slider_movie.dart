@@ -9,7 +9,6 @@ class SliderMovie extends StatefulWidget {
   const SliderMovie({Key? key, required this.listMovies}) : super(key: key);
 
   @override
-  
   _SliderMovieState createState() => _SliderMovieState();
 }
 

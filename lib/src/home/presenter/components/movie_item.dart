@@ -13,9 +13,8 @@ class MovieItem extends StatefulWidget {
       required this.movieTitle,
       required this.posterPath,
       required this.movie,
-      this.onTap,      
+      this.onTap,
       required Size imageSize});
-  
 
   @override
   State<MovieItem> createState() => _MovieItemState();

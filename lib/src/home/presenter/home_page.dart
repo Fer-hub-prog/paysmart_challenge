@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:paysmart_challenge/src/home/domain/entities/movies_model_entity.dart';
@@ -49,7 +48,11 @@ class _HomePageState extends State<HomePage> {
               backgroundColor: Colors.black,
               title: const Text(
                 'Discover >',
-                style: TextStyle(color: Colors.orange),
+                style: TextStyle(
+                    color: Colors.orange,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: 'Inter',
+                    fontSize: 24),
               ),
             ),
             body: Column(
@@ -68,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                             color: Colors.white,
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
-                            decoration: TextDecoration.underline,
+                            fontFamily: 'Inter',
                           ),
                         ),
                       ),
@@ -81,6 +84,7 @@ class _HomePageState extends State<HomePage> {
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             decoration: TextDecoration.underline,
+                            fontFamily: 'Inter',
                           ),
                         ),
                       ),
@@ -93,6 +97,7 @@ class _HomePageState extends State<HomePage> {
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             decoration: TextDecoration.underline,
+                            fontFamily: 'Inter',
                           ),
                         ),
                       ),
@@ -105,6 +110,7 @@ class _HomePageState extends State<HomePage> {
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             decoration: TextDecoration.underline,
+                            fontFamily: 'Inter',
                           ),
                         ),
                       ),
@@ -117,6 +123,7 @@ class _HomePageState extends State<HomePage> {
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
                             decoration: TextDecoration.underline,
+                            fontFamily: 'Inter',
                           ),
                         ),
                       ),
@@ -169,33 +176,33 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            // bottomNavigationBar: BottomNavigationBar(
-            //   selectedItemColor: Colors.orange,
-            //   unselectedItemColor: Colors.grey,
-            //   items: const [
-            //     BottomNavigationBarItem(
-            //       backgroundColor: Colors.black,
-            //       icon: Icon(Icons.favorite),
-            //       label: 'Favorite',
-            //     ),
-            //     BottomNavigationBarItem(
-            //       icon: Icon(Icons.search),
-            //       label: 'Search',
-            //     ),
-            //     BottomNavigationBarItem(
-            //       icon: Icon(Icons.home),
-            //       label: 'Home',
-            //     ),
-            //     BottomNavigationBarItem(
-            //       icon: Icon(Icons.category),
-            //       label: 'Cart',
-            //     ),
-            //     BottomNavigationBarItem(
-            //       icon: Icon(Icons.person),
-            //       label: 'Profile',
-            //     ),
-            //   ],
-            // ),
+            bottomNavigationBar: BottomNavigationBar(
+              selectedItemColor: Colors.orange,
+              unselectedItemColor: Colors.grey,
+              items: const [
+                BottomNavigationBarItem(
+                  backgroundColor: Colors.black,
+                  icon: Icon(Icons.favorite),
+                  label: 'Favorite',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.search),
+                  label: 'Search',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.add_shopping_cart),
+                  label: 'Cart',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  label: 'Profile',
+                ),
+              ],
+            ),
           );
         }
         return const SizedBox.expand();
